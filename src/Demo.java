@@ -12,7 +12,7 @@ public class Demo {
 
 		// With an image :
 
-		File inputImage = new File("mona.jpg");
+		File inputImage = new File("pic3.jpg");
 		BufferedImage image = ImageIO.read(inputImage);
 
 		double[][] imageData = ImageMatrixIO.imageToMat(image);
@@ -27,9 +27,18 @@ public class Demo {
 			data[count] = Arrays.copyOfRange(item,item.length/2-1,item.length);
 			count++;
 		}
+		double[][] finalData = Arrays.copyOfRange(data, 0, data.length/2-1);
+		double[][] finalData2 = Arrays.copyOfRange(finalData, 0, data.length/2-1);
+
+		for (int i = 0 ; i < finalData.length ; i++){
+			for (int j = 0 ; j < finalData[0].length ; j++){
+				finalData2[i][j] = finalData[i][j] + 6;
+			}
+		}
 
 
-		ImageIO.write(ImageMatrixIO.matToImage(data), "png", new File("output.png"));
+
+		ImageIO.write(ImageMatrixIO.matToImage(finalData2), "png", new File("output.png"));
 
 	}
 

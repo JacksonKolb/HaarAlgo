@@ -10,9 +10,7 @@ public class Demo {
 
 	public static void main(String[] args) throws IOException {
 
-		// With an image :
-
-		File inputImage = new File("pic3.jpg");
+		File inputImage = new File("girl.jpg");
 		BufferedImage image = ImageIO.read(inputImage);
 
 		double[][] imageData = ImageMatrixIO.imageToMat(image);
@@ -32,7 +30,7 @@ public class Demo {
 
 		for (int i = 0 ; i < finalData.length ; i++){
 			for (int j = 0 ; j < finalData[0].length ; j++){
-				finalData2[i][j] = finalData[i][j] + 6;
+				finalData2[i][j] = finalData[i][j]+ 12;
 			}
 		}
 

@@ -14,7 +14,7 @@ public class ImageMatrixIO {
 			for (int j = 0 ; j < h; j++){
 				int value = (int) Math.abs(mat[i][j]);
 				int color;
-				int c = new Color((255*value)/45,(255*value)/45,(255*value)/45).getRGB();
+				int c = new Color((211*value)/45,(211*value)/45,(211*value)/45).getRGB();
 
 				img.setRGB(i, j, c);
 			}
